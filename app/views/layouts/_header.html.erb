@@ -1,0 +1,9 @@
+<div>
+	<%= link_to "Home", root_url %> | 
+	<% if @user.nil?%>
+		<%= link_to "Log in", login_path %>
+	<% else %> 
+		<%= link_to "Log out", logout_path, :method => :delete %> |  <%= link_to "New post", posts_new_path %>
+	<% end %>
+	<p>
+</div>

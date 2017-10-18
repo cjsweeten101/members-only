@@ -1,0 +1,11 @@
+<% @posts.each do |p| %>
+	Author:
+	<% if !@user.nil? %>
+		 <%= User.find_by(id: p.user_id).name%>
+	<% else %>
+	???
+	<% end %>
+	<p>
+	Post: <%= p.text %>
+	<p>
+<% end %>
